@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Navbar</title>
+    <link href="./dist/styles.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+</head>
+
+<body class="font-sans bg-gray-100">
+
+  <!-- Navbar -->
+  <nav class="bg-white shadow-md p-4">
+      <div class="container mx-auto flex justify-between items-center">
+          <!-- Logo and Title -->
+          <a href="index.html" class="flex items-center space-x-3">
+              <img src="./logorbg.png" alt="Company Logo" class="h-12">
+              <h1 class="text-xl font-bold">WILMER ENTERPRISES, LLC</h1>
+          </a>        
+
+          <!-- Desktop Navigation -->
+          <div class="hidden md:flex space-x-6 items-center">
+              <a href="#" class="text-gray-800 hover:text-gray-500">About Us</a>
+
+              <!-- Dropdown: Services -->
+              <div class="relative group">
+                  <a href="#" class="text-gray-800 hover:text-gray-500">Services</a>
+                  <div class="absolute left-0 mt-2 hidden group-hover:block bg-white shadow-lg rounded-lg">
+                      <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-gray-200">Service 1</a>
+                      <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-gray-200">Service 2</a>
+                  </div>
+              </div>
+
+              <!-- Dropdown: Staffing Solutions -->
+              <div class="relative group">
+                  <a href="#" class="text-gray-800 hover:text-gray-500">Staffing Solutions</a>
+                  <div class="absolute left-0 mt-2 hidden group-hover:block bg-white shadow-lg rounded-lg">
+                      <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-gray-200">Solution 1</a>
+                      <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-gray-200">Solution 2</a>
+                  </div>
+              </div>
+
+              <a href="#" class="text-gray-800 hover:text-gray-500">Contact</a>
+          </div>
+
+          <!-- Mobile Menu Button -->
+          <div class="md:hidden">
+              <button id="hamburger" class="text-gray-800 text-3xl">
+                  <span class="material-icons">menu</span>
+              </button>
+          </div>
+      </div>
+  </nav>
+
+  <!-- Mobile Sidebar -->
+  <div id="sidebar" class="fixed top-0 right-0 transform translate-x-full w-64 h-full bg-gray-800 text-white transition-transform duration-300">
+      <button id="close-sidebar" class="text-white p-4 text-2xl">
+          <span class="material-icons">close</span>
+      </button>
+      <nav class="mt-8 space-y-4 px-4">
+          <a href="#" class="block py-2 px-4 hover:bg-gray-700 rounded">About Us</a>
+          <a href="#" class="block py-2 px-4 hover:bg-gray-700 rounded">Services</a>
+          <a href="#" class="block py-2 px-4 hover:bg-gray-700 rounded">Staffing Solutions</a>
+          <a href="#" class="block py-2 px-4 hover:bg-gray-700 rounded">Contact</a>
+      </nav>
+  </div>
+
+  <!-- Hero Section -->
+  <header class="relative h-screen flex justify-center items-center">
+      <!-- Hero Section with Background Image -->
+      <div class="relative w-full h-full flex justify-center items-center text-center text-white">
+          <!-- Background Image -->
+          <div class="absolute inset-0 bg-center bg-cover" style="background-image: url('./bg-img.png');"></div>
+
+          <!-- Gradient Overlay -->
+          <div class="absolute inset-0 bg-gradient-to-b from-black/50 to-black/50"></div>
+
+          <!-- Hero Content -->
+          <div class="relative z-10">
+              <h1 class="text-4xl md:text-5xl font-bold mb-4">Welcome to Our Website</h1>
+              <p class="text-lg md:text-2xl mb-8">Discover amazing content and stay connected</p>
+              <a href="#learn-more" class="px-5 py-3 bg-orange-500 text-white rounded-lg hover:bg-orange-600 transition duration-300">Learn More</a>
+          </div>
+      </div>
+  </header>
+
+  <main>
+        <!-- About Us Section -->
+        <section id="learn-more" class="container mx-auto py-16">
+            <h2 class="text-3xl font-bold text-center mb-8">About Us</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div>
+                    <img src="./logorbg.png" alt="About Us" class="w-full rounded-lg">
+                </div>
+                <div>
+                    <h3 class="text-2xl font-bold mb-4">Our Mission</h3>
+                    <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut purus eget sapien egestas
+                        fermentum. Nullam nec nunc nec nunc.</p>
+                    <h3 class="text-2xl font-bold mb-4">Our Vision</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut purus eget sapien egestas fermentum.
+                        Nullam nec nunc nec nunc.</p>
+                </div>
+            </div>
+        </section>
+    
+        <!-- Services Section -->
+        <section class="bg-gray-100 py-16">
+            <div class="container mx-auto">
+                <h2 class="text-3xl font-bold text-center mb-8">Our Services</h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="bg-white p-6 rounded-lg shadow-md">
+                        <h3 class="text-2xl font-bold mb-4">Service 1</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut purus eget sapien egestas
+                            fermentum.</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-md">
+                        <h3 class="text-2xl font-bold mb-4">Service 2</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut purus eget sapien egestas
+                            fermentum.</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-md">
+                        <h3 class="text-2xl font-bold mb-4">Service 3</h3>
+                        <p>Lorem ipsum dolor sit
+  </main>
+
+  <script>
+      // Sidebar toggle logic
+      const hamburger = document.getElementById('hamburger');
+      const sidebar = document.getElementById('sidebar');
+      const closeSidebar = document.getElementById('close-sidebar');
+
+      hamburger.addEventListener('click', () => {
+          sidebar.classList.remove('translate-x-full');
+      });
+
+      closeSidebar.addEventListener('click', () => {
+          sidebar.classList.add('translate-x-full');
+      });
+  </script>
+</body>
+
+</html>
